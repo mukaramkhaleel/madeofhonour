@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Made of Honour – Post 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: #fdfaf7;
+      color: #333;
+      max-width: 720px;
+      margin: 50px auto;
+      padding: 20px 30px;
+      line-height: 1.8;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin: 2em 0 1em;
+      color: #444;
+    }
+
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1.05em;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      background: #f2efe8;
+      padding: 1em;
+      border-left: 4px solid #d4b38f;
+      margin: 2em 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    .actions button {
+      background: #d4b38f;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      color: white;
+      border-radius: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="post-content">
+    <h1>Made of Honour</h1>
+    <p><strong>Made of Honour</strong> is a weekly thank-you series to those who shaped me. Small gestures. Big moments. One post every week. One name never forgotten.</p>
+
+    <h2>Post 2: Half a Ladoo</h2>
+
+    <p>All my life, I never had a full Cadbury.</p>
+
+    <p>It was always shared — one half for me, one half for my mother. It wasn’t about the chocolate. It was about the bond. A quiet, wordless ritual.</p>
+
+    <p>That small act defined what sweetness meant to me — not more, just enough. Shared.</p>
+
+    <p>Years later, I was working at Rakuten in the World Trade Center. A fast-moving startup. My desk was near finance and HR — the unofficial snack corner of the office. If you were ever hungry, you’d find something there.</p>
+
+    <p>Six months before that, I had lost my mother. And with her, the sharing ended. Not just the Cadburys — the feeling. The small gestures. The pauses in the middle of life where love shows up as something simple.</p>
+
+    <p>Then one afternoon, someone from finance brought ladoos. Someone who didn’t know my story walked up and handed me half a ladoo.</p>
+
+    <p>Just half. No explanation.</p>
+
+    <p>And in that moment, it all came rushing back — the shape. The silence. The feeling of home.</p>
+
+    <p>My body remembered before my mind did. It was like the universe reached through someone else to remind me:</p>
+
+    <div class="quote">“She’s still with you.”</div>
+
+    <p>No one’s ever done that for me again. And maybe no one ever will. But to the person who shared that half ladoo — you gave me something sacred.</p>
+
+    <div class="quote">Some sweetness doesn’t come in full pieces.<br>And some moments don’t come twice.</div>
+
+    <p>If this story stays with you… maybe next time you’ll share your sweet too. Not because you have to. But because someone, somewhere, might really need it.</p>
+  </div>
+
+  <div class="actions">
+    <button onclick="captureScreenshot()">📸 Take Screenshot</button>
+  </div>
+
+  <div class="footer">© Mukaram Khaleel — Made of Honour</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    function captureScreenshot() {
+      const content = document.getElementById("post-content");
+      html2canvas(content).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "made-of-honour-post2.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+      });
+    }
+  </script>
+
+</body>
+</html>
